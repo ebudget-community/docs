@@ -1,17 +1,22 @@
-# Welcome to MkDocs
+---
+hide:
+  - toc
+  - navigation
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Общественная База знаний по Государственной Интегрированной Информационной Системе &laquo;Электронный бюджет&raquo; {#head}
 
-## Commands
+![Лого Электронный бюджет](https://gitflic.ru/project/ebudget-community/gitflicbook/blob/raw?file=assets%2Fimages%2Febudget-logo.png&inline=true&commit=4f1f3a15f7ac0ca8d94e2dac82966971e95033cc)
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+!!! warning "ДИСКЛЕЙМЕР"
 
-## Project layout
+    Проект не имеет прямого отношения к Федеральному Казначеству (Казначеству России) и не аффилирован с ним. Вся информация, выложенная в книге, выложена на общественных началах неравнодушным блогером, исключительно в личных корыстных целях. А значит, не утверждалась официальными представителями ФК и не может считаться за официальную информацию от лица Федерального Казначейства.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+    Потому выложена от имени сообщества ~~страдальцев~~ пользователей Информационной Системы. Продолжая использование информации с этой общественной Базы знаний, вы соглашаетесь с этим "условием". Если что не так, все лучи ненависти и замечания кидаем исключительно в автора/редактора, путём создания [проблемы](about/index.md#issues).
+
+    Всю актуальную официальную информацию вы можете найти на [официальном сайте Федерального Казначейства](https://roskazna.gov.ru/) или территориальных представительств.
+
+## Предыдущие наименования (для поиска) {#old-names}
+
+- `ebudget-community.gitflic.space`
+- `ebudget.site`

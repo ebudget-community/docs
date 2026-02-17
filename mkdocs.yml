@@ -1,6 +1,10 @@
 site_name: База знаний по Электронному бюджету
 site_url: https://ebudget-community.ru
 
+nav:
+  - Главная: index.md
+  - О проекте: about/index.md
+
 theme:
   name: material
   language: ru
@@ -8,7 +12,9 @@ theme:
     - content.tabs.link
     - content.code.copy
     - navigation.expand
-    - navigation.sections
+    - navigation.tabs
+    - navigation.indexes
+    - toc.integrate
 
 markdown_extensions:
   - admonition
@@ -22,6 +28,8 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.snippets:
       base_path: ["docs"]
+  - pymdownx.tilde
+  - attr_list
   - toc:
       permalink: true
 
