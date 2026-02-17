@@ -1,0 +1,3 @@
+[submodule "docs/assets/common-images"]
+	path = docs/assets/common-images
+	url = git@gitflic.ru:ebudget-community/common-images.git

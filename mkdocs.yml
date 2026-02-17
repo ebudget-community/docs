@@ -1,0 +1,31 @@
+site_name: База знаний по Электронному бюджету
+site_url: https://ebudget-community.ru
+
+theme:
+  name: material
+  language: ru
+  features:
+    - content.tabs.link  # Синхронизация вкладок (выбрал Win — везде Win)
+    - content.code.copy
+    - navigation.expand
+    - navigation.sections
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets:
+      base_path: ["docs"] # Позволяет инклудить файлы
+  - toc:
+      permalink: true # Те самые якори для заголовков
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
