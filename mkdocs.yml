@@ -5,7 +5,7 @@ theme:
   name: material
   language: ru
   features:
-    - content.tabs.link  # Синхронизация вкладок (выбрал Win — везде Win)
+    - content.tabs.link
     - content.code.copy
     - navigation.expand
     - navigation.sections
@@ -21,9 +21,9 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.snippets:
-      base_path: ["docs"] # Позволяет инклудить файлы
+      base_path: ["docs"]
   - toc:
-      permalink: true # Те самые якори для заголовков
+      permalink: true
 
 plugins:
   - search
