@@ -6,7 +6,8 @@
         mkdocs-material
         mkdocs-minify-plugin
         pymdown-extensions
-        mkdocs-get-deps 
+        mkdocs-get-deps
+        mkdocs-exclude
       ]);
     in
       (pkgs.mkShell {

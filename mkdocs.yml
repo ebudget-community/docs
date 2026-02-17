@@ -29,3 +29,6 @@ plugins:
   - search
   - minify:
       minify_html: true
+  - exclude:
+      glob:
+        - assets/*.md
