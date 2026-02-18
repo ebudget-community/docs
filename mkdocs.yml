@@ -40,3 +40,4 @@ plugins:
   - exclude:
       glob:
         - assets/*.md
+
