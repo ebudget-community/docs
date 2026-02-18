@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches: [ "master" ]
-    paths:
-      - "mkdocs.yml"
-      - "docs/**"
+    # paths:
+    #   - "mkdocs.yml"
+    #   - "docs/**"
 
 jobs:
   build:
