@@ -6,5 +6,6 @@
 
 - [Основной репозиторий на GitVerse][project_gitverse]
 - [Зеркало репозитория на GitFlic][project_gitflic]
+- [Зеркало репозитория на GitHub][project_github]
 
 <!-- // code: language=markdown insertSpaces=true tabSize=2 -->
