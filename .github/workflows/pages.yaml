@@ -18,17 +18,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
+          submodules: recursive
           fetch-depth: 0
-      
-      # GitHub is considered as a mirror and temporary location
-      # When GitVerse ship support for custom domains, it will be the main location
-      # To fetch from GitHub submodule mirror, we need to patch `.gitmodules` file
-      - name: Patch submodule URL
-        run: |
-          sed -i 's;ssh://git@gitverse.ru:2222/ebudget-community/common-images.git;git@github.com:ebudget-community/common-images.git;' .gitmodules
-
-      - name: Checkout submodules
-        run: git submodule update --init --recursive
 
       # https://github.com/marketplace/actions/the-determinate-nix-installer
       - name: Install Nix
