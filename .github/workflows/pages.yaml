@@ -21,10 +21,6 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      # https://github.com/marketplace/actions/install-nix
-      # - name: Install Nix
-      #   uses: cachix/install-nix-action@v31
-
       # https://github.com/marketplace/actions/nothing-but-nix
       - name: Cleanup official image
         uses: wimpysworld/nothing-but-nix@main
