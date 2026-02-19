@@ -3,6 +3,9 @@ site_url: https://ebudget-community.ru
 
 docs_dir: docs
 
+repo_url: https://gitverse.ru/ebudget-community/docs
+repo_name: gitverse/ebudget-community/docs
+
 nav:
   - Главная: index.md
   - О проекте:
@@ -12,6 +15,8 @@ nav:
 
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/git-alt 
   language: ru
   features:
     - content.tabs.link
@@ -53,6 +58,21 @@ markdown_extensions:
 
 extra_css:
   - assets/extra.css
+
+extra:
+  social:
+    - name: GitVerse
+      icon: fontawesome/brands/git-alt
+      link: https://gitverse.ru/ebudget-community/docs
+    - name: GitFlic (Зеркало)
+      icon: fontawesome/brands/gitlab
+      link: https://gitflic.ru/project/ebudget-community/docs
+    - name: GitHub (Зеркало)
+      icon: fontawesome/brands/github
+      link: https://github.com/ebudget-community/docs
+    - name: Telegram
+      icon: fontawesome/brands/telegram 
+      link: https://t.me/ebudget_community
 
 plugins:
   - search
