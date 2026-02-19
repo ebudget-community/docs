@@ -52,7 +52,7 @@ jobs:
         run: "[[ -d './site' ]]"
 
       - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: 'site/'
 
@@ -61,16 +61,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Go необходим для выполнения deploy-pages
       - name: Setup Go
         uses: actions/setup-go@v4
         with:
           go-version: '>=1.23'
 
-      # Выполняем деплой GitVerse Pages через наш action
-      - name: Deploy to GitVerse Pages
+      - name: Deploy to Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
         with:
           artifact_name: gitverse-pages
 
