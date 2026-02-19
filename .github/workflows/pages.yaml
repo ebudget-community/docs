@@ -49,7 +49,7 @@ jobs:
         run: nix develop --command mkdocs build --verbose --strict --site-dir site/
       
       - name: Sanity check
-        run: [[ -d './site' ]]
+        run: "[[ -d './site' ]]"
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v1
