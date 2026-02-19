@@ -1,9 +1,14 @@
 site_name: База знаний по Электронному бюджету
 site_url: https://ebudget-community.ru
 
+docs_dir: docs
+
 nav:
   - Главная: index.md
-  - О проекте: about/index.md
+  - О проекте:
+    - about/index.md
+    - about/issues.md
+    - about/contacts.md
 
 theme:
   name: material
@@ -17,8 +22,16 @@ theme:
     - toc.integrate
 
 markdown_extensions:
+  # Обычные
   - admonition
+  - attr_list
+  - toc:
+      permalink: true
+  # PyMdownX
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -27,11 +40,19 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.snippets:
-      base_path: ["docs"]
+      base_path:
+        - docs/
+      check_paths: true
+
+      # Указанные в этом списке файлы будут автоматически добавляться ко всем Markdown файлам
+      auto_append:
+        - assets/links.md
+        - assets/images.md
+
   - pymdownx.tilde
-  - attr_list
-  - toc:
-      permalink: true
+
+extra_css:
+  - assets/extra.css
 
 plugins:
   - search
@@ -40,3 +61,10 @@ plugins:
   - exclude:
       glob:
         - assets/*.md
+
+validation:
+  links:
+    # Все абсолютные ссылки резолвятся относительно docs/ (корня документации)
+    absolute_links: relative_to_docs
+    anchors: warn
+#    unrecognized_links: warn

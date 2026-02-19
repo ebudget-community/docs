@@ -1,0 +1,63 @@
+
+/* Большую часть этого CSS сгенерировал Gemini. Пока сойдёт и так. */
+
+:root {
+  --md-primary-fg-color:        #dddad0;
+  --md-primary-fg-color--text:  #222222;
+  --md-primary-bg-color:        #222222;
+  --md-primary-bg-color--light: #f5f5f5;
+
+  --md-typeset-a-color: #0056b3;
+
+  --md-accent-fg-color: #003d7a;
+  --md-accent-fg-color--transparent: rgba(0, 86, 179, 0.1);
+}
+
+/* Фикс для иконок и текста в шапке, чтобы они не были белыми */
+.md-header {
+  color: var(--md-primary-bg-color);
+}
+
+
+/* Красим иконки и текст в шапке в темный */
+.md-header__button, 
+.md-header__title,
+.md-nav__button {
+  color: var(--md-header-fg-color) !important;
+}
+
+/* Фикс для навигации, чтобы активные пункты не были слишком светлыми */
+.md-nav__link--active {
+  color: var(--md-typeset-a-color) !important;
+}
+
+/* Кнопки */
+.md-typeset .md-button {
+  color: #647274 !important;       /* Цвет текста */
+  border-color: #647274 !important; /* Цвет рамки */
+}
+
+/* Кнопки */
+/* При наведении — инверсия */
+.md-typeset .md-button:hover {
+  background-color: #647274 !important;
+  color: #ffffff !important;
+}
+
+/* 2. Исправляем иконки внутри кнопок (например, Telegram) */
+.md-typeset .md-button .twemoji, 
+.md-typeset .md-button svg {
+  fill: currentColor !important;
+}
+
+/* Заголовки блоков Admonition (Note, Warning и т.д.) */
+.md-typeset .admonition-title, 
+.md-typeset summary.admonition-title {
+  color: #222222 !important;
+}
+
+/* Иконка в заголовке Admonition */
+.md-typeset .admoniti on-title::before, 
+.md-typeset summary.admonition-title::before {
+  background-color: #222222 !important;
+}

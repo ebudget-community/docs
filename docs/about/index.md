@@ -1,47 +1,10 @@
----
-hide:
-  - toc
-  - navigation
----
-
 # О проекте {#head}
 
-## Контактная информация {#contacts}
+Проект использует [MkDocs](https://www.mkdocs.org/) с темой [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) и наобором расширений [PyMdown](https://facelessuser.github.io/pymdown-extensions/) для преобразования файлов Markdown, расположенных в папке `docs/`, в [корне репозитория с исходными данными проекта](#git) (ниже), в статический сайт, который может быть размещён на таком ресурсе, как [GitVerse Pages](https://gitverse.ru/docs/pages/overview/) или [GitHub Pages](https://docs.github.com/en/pages).
 
-### Канал в Telegram {#contacts-telegram-channel}
+## Репозитории проекта {#git}
 
-Канал для публикации новостей связанных с проектом.
-
-[Ссылка](https://t.me/ebudget_community)
-
-### Группа в Telegram {#contacts-telegram-group}
-
-Группа сообщества для обсуждения работы в ГИИС &laquo;Электронный бюджет&raquo; и решения вопросов на общественных началах.
-
-<details>
-  <summary>И да</summary>
-
-  Автор там тоже состоит
-
-</details><br/>
-
-[Ссылка](https://t.me/ebudgetru)
-
-## Сообщить об ошибке {#issues}
-
-Если вы нашли ошибку на этом сайте и хотите о ней сообщить. Обсудить проект. Сообщить о пожеланиях. Предложить статью к публикации.
-
-Откройте проблему в репозитории по ссылке:
-
-<https://gitverse.ru/ebudget-community/docs/tasktracker/new>
-
-Потребуется [зарегистрироваться на GitVerse](https://gitverse.ru/docs/gitverse/account-profile/quick-start/).
-
-!!! warning "Внимание"
-    Техническая поддержка по настройке АРМ в проблемах не осуществляется.
-
-    Для получения помощи, обратитесь в [группу](#contacts-telegram-group) или создайте заявку в [техническую поддержку Электронного Бюджета](support/howto/newsd)!
-
-    Все проблемы созданные не по теме наполнения сайта информацией будут закрыты.
+- [Основной репозиторий на GitVerse][project_gitverse]
+- [Зеркало репозитория на GitFlic][project_gitflic]
 
 <!-- // code: language=markdown insertSpaces=true tabSize=2 -->
