@@ -24,10 +24,6 @@ jobs:
       # https://github.com/marketplace/actions/install-nix
       # - name: Install Nix
       #   uses: cachix/install-nix-action@v31
-      #   with:
-      #     extra_nix_config: |
-      #       extra-substituters = https://mirror.sjtu.edu.cn/nix-channels/store
-      #       extra-substituters = https://mirrors.ustc.edu.cn/nix-channels/store
 
       # https://github.com/marketplace/actions/nothing-but-nix
       - name: Cleanup official image
@@ -36,10 +32,6 @@ jobs:
       # https://github.com/marketplace/actions/the-determinate-nix-installer
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
-        with:
-          extra_conf: |
-            extra-substituters = https://mirror.sjtu.edu.cn/nix-channels/store
-            extra-substituters = https://mirrors.ustc.edu.cn/nix-channels/store
 
       # https://github.com/marketplace/actions/magic-nix-cache
       - name: Setup Nix Cache
