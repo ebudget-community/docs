@@ -21,9 +21,9 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      # https://github.com/marketplace/actions/the-determinate-nix-installer
+      # https://github.com/marketplace/actions/install-nix
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@main
+        uses: cachix/install-nix-action@v31
 
       - name: Build mkdocs site using flake
         run: nix develop --command mkdocs build --verbose --strict --site-dir site/
