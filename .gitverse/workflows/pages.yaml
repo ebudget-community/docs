@@ -22,34 +22,17 @@ jobs:
           fetch-depth: 0
 
       # https://github.com/marketplace/actions/install-nix
-      # - name: Install Nix
-      #   uses: cachix/install-nix-action@v31
-      #   with:
-      #     extra_nix_config: |
-      #       extra-substituters = https://mirror.sjtu.edu.cn/nix-channels/store
-      #       extra-substituters = https://mirrors.ustc.edu.cn/nix-channels/store
-
-      # https://github.com/marketplace/actions/nothing-but-nix
-      - name: Cleanup official image
-        uses: wimpysworld/nothing-but-nix@main
-
-      # https://github.com/marketplace/actions/the-determinate-nix-installer
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@main
+        uses: cachix/install-nix-action@v31
         with:
-          extra_conf: |
-            extra-substituters = https://mirror.sjtu.edu.cn/nix-channels/store
-            extra-substituters = https://mirrors.ustc.edu.cn/nix-channels/store
-
-      # https://github.com/marketplace/actions/magic-nix-cache
-      - name: Setup Nix Cache
-        uses: DeterminateSystems/magic-nix-cache-action@main
+          extra_nix_config: |
+            substituters = https://mirror.sjtu.edu.cn/nix-channels/store https://mirrors.ustc.edu.cn/nix-channels/store https://cache.nix.org/
 
       - name: Build mkdocs site using flake
         run: nix develop --command mkdocs build --verbose --strict --site-dir site/
       
       - name: Sanity check
-        run: [[ -d './site' ]]
+        run: "[[ -d './site' ]]"
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v1
@@ -67,7 +50,6 @@ jobs:
         with:
           go-version: '>=1.23'
 
-      # Выполняем деплой GitVerse Pages через наш action
       - name: Deploy to GitVerse Pages
         id: deployment
         uses: actions/deploy-pages@v1
