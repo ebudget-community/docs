@@ -1,0 +1,78 @@
+name: GitVerse Pages
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - mkdocs.yml
+      - docs/**
+  
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      # https://github.com/marketplace/actions/install-nix
+      # - name: Install Nix
+      #   uses: cachix/install-nix-action@v31
+      #   with:
+      #     extra_nix_config: |
+      #       extra-substituters = https://mirror.sjtu.edu.cn/nix-channels/store
+      #       extra-substituters = https://mirrors.ustc.edu.cn/nix-channels/store
+
+      # https://github.com/marketplace/actions/nothing-but-nix
+      - name: Cleanup official image
+        uses: wimpysworld/nothing-but-nix@main
+
+      # https://github.com/marketplace/actions/the-determinate-nix-installer
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+        with:
+          extra_conf: |
+            extra-substituters = https://mirror.sjtu.edu.cn/nix-channels/store
+            extra-substituters = https://mirrors.ustc.edu.cn/nix-channels/store
+
+      # https://github.com/marketplace/actions/magic-nix-cache
+      - name: Setup Nix Cache
+        uses: DeterminateSystems/magic-nix-cache-action@main
+
+      - name: Build mkdocs site using flake
+        run: nix develop --command mkdocs build --verbose --strict --site-dir site/
+      
+      - name: Sanity check
+        run: [[ -d './site' ]]
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'site/'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      # Go необходим для выполнения deploy-pages
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '>=1.23'
+
+      # Выполняем деплой GitVerse Pages через наш action
+      - name: Deploy to GitVerse Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+        with:
+          artifact_name: gitverse-pages
+
+      - name: Print deploy URL
+        run: echo "🌐 page_url = ${{ steps.deployment.outputs.page_url }}"
