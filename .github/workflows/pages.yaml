@@ -21,10 +21,6 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      # https://github.com/marketplace/actions/nothing-but-nix
-      - name: Cleanup official image
-        uses: wimpysworld/nothing-but-nix@main
-
       # https://github.com/marketplace/actions/the-determinate-nix-installer
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
