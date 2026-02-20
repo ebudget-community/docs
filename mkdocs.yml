@@ -17,6 +17,7 @@ theme:
   name: material
   icon:
     repo: fontawesome/brands/git-alt 
+    annotation: material/plus-circle
   language: ru
   features:
     - content.tabs.link
@@ -30,6 +31,7 @@ markdown_extensions:
   # Обычные
   - admonition
   - attr_list
+  - md_in_html
   - toc:
       permalink: true
   # PyMdownX
