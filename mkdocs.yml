@@ -8,6 +8,9 @@ repo_name: ebudget-community/docs
 
 nav:
   - Главная: index.md
+  - Глоссарий:
+    - glossary/abbreviations.md
+    - glossary/glossary.md
   - О проекте:
     - about/index.md
     - about/issues.md
@@ -17,6 +20,7 @@ theme:
   name: material
   icon:
     repo: fontawesome/brands/git-alt 
+    annotation: material/plus-circle
   language: ru
   features:
     - content.tabs.link
@@ -28,8 +32,10 @@ theme:
 
 markdown_extensions:
   # Обычные
+  - abbr
   - admonition
   - attr_list
+  - md_in_html
   - toc:
       permalink: true
   # PyMdownX
@@ -52,7 +58,7 @@ markdown_extensions:
       auto_append:
         - assets/links.md
         - assets/images.md
-
+        - assets/abbreviations.md
   - pymdownx.tilde
 
 extra_css:
@@ -80,6 +86,12 @@ plugins:
   - exclude:
       glob:
         - assets/*.md
+  - table-reader
+
+# Включить принудительно эту папку в результаты сборки
+# Она не включается по умолчанию, т.к. название начинается с точки
+exclude_docs: |
+  !assets/common-images/.unsorted/**
 
 validation:
   links:
