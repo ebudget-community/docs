@@ -10,6 +10,7 @@ nav:
   - Главная: index.md
   - Глоссарий:
     - glossary/abbreviations.md
+    - glossary/glossary.md
   - О проекте:
     - about/index.md
     - about/issues.md
