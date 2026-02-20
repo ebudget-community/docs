@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "chrislajoie.vscode-modelines",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-russian",
+        "davidanson.vscode-markdownlint",
+        "yzhang.markdown-all-in-one",
+        "gruntfuggly.todo-tree"
+    ]
+}
