@@ -29,6 +29,7 @@ theme:
 
 markdown_extensions:
   # Обычные
+  - abbr
   - admonition
   - attr_list
   - md_in_html
