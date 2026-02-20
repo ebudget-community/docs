@@ -8,6 +8,8 @@ repo_name: gitverse/ebudget-community/docs
 
 nav:
   - Главная: index.md
+  - Глоссарий:
+    - glossary/abbreviations.md
   - О проекте:
     - about/index.md
     - about/issues.md
@@ -55,7 +57,7 @@ markdown_extensions:
       auto_append:
         - assets/links.md
         - assets/images.md
-
+        - assets/abbreviations.md
   - pymdownx.tilde
 
 extra_css:
