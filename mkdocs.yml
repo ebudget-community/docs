@@ -81,6 +81,7 @@ plugins:
   - exclude:
       glob:
         - assets/*.md
+  - table-reader
 
 validation:
   links:

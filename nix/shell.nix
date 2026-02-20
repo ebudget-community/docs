@@ -8,6 +8,7 @@
         pymdown-extensions
         mkdocs-get-deps
         mkdocs-exclude
+        mkdocs-table-reader-plugin
       ]);
     in
       (pkgs.mkShell {
