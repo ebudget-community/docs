@@ -4,7 +4,7 @@ site_url: https://ebudget-community.ru
 docs_dir: docs
 
 repo_url: https://gitverse.ru/ebudget-community/docs
-repo_name: gitverse/ebudget-community/docs
+repo_name: ebudget-community/docs
 
 nav:
   - Главная: index.md
