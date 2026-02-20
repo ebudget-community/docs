@@ -1,0 +1,94 @@
+{
+    "Insert modeline": {
+        "prefix": "markdown-modeline",
+        "body": "<!-- // code: language=markdown insertSpaces=true tabSize=2 -->",
+        "description": "Вставить строку modeline для markdown"
+    },
+	"Insert MPE notice": {
+        "prefix": "markdown-mpe-notice",
+        "body": "<!-- Этот документ обрабатывается в Markdown Preview Enhanced. Не редактируйте его напрямую. -->",
+        "description": "Вставить комментарий, указывающий на то, что документ предназначен для Markdown Preview Enhanced"
+    },
+    "Insert keyboard HTML tag": {
+		"prefix": "html-kbd",
+		"body": [
+			"<kbd>$1</kbd>"
+		]
+	},
+	"Insert keyboard shortcut": {
+		"prefix": ["keyboard shortcut", "сочетание клавиш"],
+		"body": [
+			"&#9000;<kbd>$1</kbd>"
+		]
+	},
+	"Insert typographic quotation": {
+		"prefix": ["html-laquo", "ёлочки", "елочки"],
+		"body": [
+			"&laquo;$1&raquo;"
+		]
+	},
+	"Insert mdash": {
+		"prefix": ["html-symbol-mdash", "тире"],
+		"body": [
+			"&mdash;"
+		]
+	},
+	"Insert ndash": {
+		"prefix": ["html-symbol-ndash", "короткое тире"],
+		"body": [
+			"&ndash;"
+		]
+	},
+	"Insert abbreviation": {
+		"prefix": ["html-abbr", "аббревиатура"],
+		"body": "<abbr title=\"$2\">$1</abbr>"
+	},
+	"Insert custom anchor": {
+		"prefix": ["html-anchor", "якорь"],
+		"body": "<a name=\"$2\">$1</a>"
+	},
+	"Insert image": {
+		"prefix": "markdown-image",
+		"body": "![$2]($1)"
+	},
+	"Insert link": {
+		"prefix": "markdown-link",
+		"body": "[$2]($1)"
+	},
+	"Insert html line break": {
+		"prefix": "html-br",
+		"body": "<br/>"
+	},
+	"Insert html img": {
+		"prefix": "html-img",
+		"body": [
+			"<img",
+			"\tsrc=\"$1\"",
+			"\talt=\"$2\"/>"
+		]
+	},
+	"Insert html details": {
+		"prefix": "html-details",
+		"body": [
+			"<details>",
+			"",
+			"$1",
+			"",
+			"</details><br/>"
+		]
+	},
+	"Insert boxplus (winkey)": {
+		"prefix": ["html-symbol-boxplus", "html-symbol-winkey"],
+    "description": "Perfectly fits as a modern Win key symbol",
+		"body": [
+			"&boxplus;"
+		]
+	},
+	"Insert tab symbol": {
+		"prefix": ["html-symbol-tabkey"],
+    "description": "Perfectly fits as a Tab key symbol",
+		"body": [
+			"&#8633;"
+		]
+	}
+}

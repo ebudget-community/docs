@@ -1,0 +1,98 @@
+{
+    // При копировании путей всегда использовать `/` в качестве разделителя пути
+    "explorer.copyRelativePathSeparator": "/",
+
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+
+    // VS Code default formatter
+    "[markdown]": {
+        // Markdown All In One имеет замечательный форматтер
+        // Он умеет предлагать ссылки на любой файл в рабочей директории
+        // Он умеет правильно форматировать списки автоматически. Форматировать таблицы...
+        // Короче, в разы лучше, чем стандартный.
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+
+    "markdown.updateLinksOnFileMove.enabled": "prompt",
+    "markdown.copyFiles.destination": {
+      "*": "/assets/images/${documentBaseName}_${fileName}"
+    },
+    "markdown.preferredMdPathExtensionStyle": "removeExtension",
+
+    "markdown.extension.italic.indicator": "_",
+    "markdown.extension.list.indentationSize": "inherit",
+    "markdown.extension.tableFormatter.normalizeIndentation": true,
+    "markdown.extension.print.absoluteImgPath": true,
+    "markdown.extension.completion.enabled": true,
+    "markdown.extension.completion.root": "/docs",
+    "markdown.extension.toc.unorderedList.marker": "*",
+    
+    "markdown-preview-enhanced.imageFolderPath": "/docs/assets/images",
+    "markdown-preview-enhanced.enableTypographer": false,
+    "markdown-preview-enhanced.enableExtendedTableSyntax": false,
+    "markdown-preview-enhanced.previewMode": "Multiple Previews",
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "markdown-preview-enhanced.markdownFileExtensions": [
+      ".mdpe",
+      ".md",
+      ".markdown",
+      ".mdown",
+      ".mkdn",
+      ".mkd",
+      ".rmd",
+      ".qmd",
+      ".mdx"
+    ],
+
+    "markdown.updateLinksOnFileMove.include": [
+      "**/*.{md,mdpe,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}",
+      "**/*.{jpg,jpe,jpeg,png,bmp,gif,ico,webp,avif,tiff,svg,mp4,pdf}"
+    ],
+
+    // Code Spell Checker
+    "cSpell.language": "ru,ru-RU,en-US,en",
+    "cSpell.words": [
+      "журналируемые",
+      "криптопровайдер",
+      "криптопровайдера",
+      "криптопровайдере",
+      "криптопровайдером",
+      "перевыпуск",
+      "проксировать",
+      "Сублицензирование",
+      "Сублицензирования"
+    ],
+    "cSpell.ignoreWords": [
+      "GOST",
+      "compatiblelicenses",
+      "cpconfig",
+      "creativecommons",
+      "cryptopro",
+      "ebudget",
+      "fontawesome",
+      "gosttls",
+      "licmgmt",
+      "tldr",
+      "tlsclient",
+      "АВПО",
+      "АПМДЗ",
+      "ВОИС",
+      "ГИИС",
+      "ЗКГУ",
+      "СКЗИ",
+      "ТОФК",
+      "УКЭП",
+      "ФСТЭК",
+      "УНФА",
+      "ГУИД",
+      "Kaspersky",
+      "roskazna",
+      "Рутокен",
+      "Сертум",
+      "Минцифры",
+      "Крипто",
+    ],
+
+    "dotenv.enableAutocloaking": true,
+}

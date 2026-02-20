@@ -1,0 +1,7 @@
+{
+  "Insert modeline": {
+      "prefix": "python-modeline",
+      "body": "# code: language=python insertSpaces=true tabSize=4",
+      "description": "Вставить строку modeline для python"
+  },
+}
