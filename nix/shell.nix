@@ -26,5 +26,21 @@
 
       }
     );
+
+    devShells.uv = pkgs.mkShell {
+      name = "uv-shell";
+
+      buildInputs = with pkgs; [
+        uv
+        just
+        git
+      ];
+
+      shellHook = ''
+        export PS1="(uv)\\040''${PS1}";
+      '';
+    };
+    
   };
+
 }
