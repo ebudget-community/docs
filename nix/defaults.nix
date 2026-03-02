@@ -1,5 +1,5 @@
 {
     perSystem = { pkgs, self', ... }: {
-      devShells.default = self'.devShells.mkdocs;
+      devShells.default = self'.devShells.uv2nix;
     };
 }
