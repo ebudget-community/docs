@@ -21,7 +21,7 @@
         ];
 
         shellHook = ''
-          export PS1="(mkdocs) ''${PS1}";
+          export PS1="(mkdocs)\\040''${PS1}";
         '';
 
       }
