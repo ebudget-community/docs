@@ -21,15 +21,20 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      # https://github.com/marketplace/actions/install-nix
-      - name: Install Nix
-        uses: cachix/install-nix-action@v31
+      # https://github.com/marketplace/actions/astral-sh-setup-uv
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
         with:
-          extra_nix_config: |
-            substituters = https://mirror.sjtu.edu.cn/nix-channels/store https://mirrors.ustc.edu.cn/nix-channels/store https://cache.nixos.org/
+          # По умолчанию там auto, а я не уверен, что GitVerse поддерживает эту функцию
+          # enable-cache: true
+          python-version: "3.12"
+          version: "0.10.2"
+      
+      - name: Set up Python
+        run: uv python install
 
-      - name: Build mkdocs site using flake
-        run: nix develop --command mkdocs build --verbose --strict --site-dir site/
+      - name: Build site
+        run: uv run mkdocs build --verbose --strict --site-dir site/
       
       - name: Sanity check
         run: "[[ -d './site' ]]"
