@@ -33,7 +33,9 @@ jobs:
         run: uv python install
 
       - name: Build site
-        run: uv run mkdocs build --verbose --strict --site-dir site/
+        run: |
+          export NO_MKDOCS_2_WARNING=1
+          uv run mkdocs build --verbose --strict --site-dir site/
       
       - name: Sanity check
         run: "[[ -d './site' ]]"
