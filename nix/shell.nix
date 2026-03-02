@@ -1,7 +1,7 @@
 {
   perSystem = { pkgs, self', ... }: {
     devShells.mkdocs = let
-      pythonEnv = pkgs.python314.withPackages (ps: with ps; [
+      pythonEnv = pkgs.python312.withPackages (ps: with ps; [
         mkdocs
         mkdocs-material
         mkdocs-minify-plugin
